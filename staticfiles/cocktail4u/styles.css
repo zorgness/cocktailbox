@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+a,
+a:visited {
+  color: #222;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  
+  background-color: gold;
+}
+
+.banner {
+  opacity: 0.4;
+  position: absolute;
+  text-align: center;
+
+  
+}
+.banner img {
+  width: 40%;
+}
+
+
+.title {
+  color: black;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1;
+  font-size: clamp(1rem, 5vw, 6rem);
+  text-shadow: 2px 2px 0 rgba(51, 51, 51, 0.452);
+  padding: 15px;
+  text-align: center;
+}
+
+#title-2 {
+  text-decoration: none;
+}
+
+body #searchInput {
+  height: 2rem;
+  width: 300px;
+  border: none;
+  outline: none;
+  text-align: center;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px #333;
+  font-size: 1.2rem;
+}
+body #searchInput {
+  transition: 0.2s ease;
+}
+body #searchInput:focus {
+  background: black;
+  color: white;
+  font-weight: 400;
+}
+
+#popular {
+  margin: 30px;
+}
+
+#ingredient {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.popular-img {
+  width: 45%;
+}
+
+body #results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+ 
+
+}
+body .noResult {
+  font-size: 4rem;
+}
+body .searchContainer {
+
+  background-color: white;
+  margin: 0.5rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px #333;
+}
+body .searchContainer .drink-name {
+  text-align: center;
+}
+body .searchContainer .drink-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+body .searchContainer .infos {
+  font-weight: 600;
+  margin: 1rem 0;
+}
+body .searchContainer img {
+  width: 90%;
+  max-width: 250px;
+  border-radius: 30px;
+  box-shadow: 0 4px 4px #222;
+  margin-bottom: 1rem;
+}
+body .searchContainer .drink-ingredient {
+  display: flex;
+  flex-direction: column;
+}
+body .searchContainer .div-like,
+body .searchContainer .div-counter {
+  text-align: center;
+}
+
+body #results.active {
+  animation-name: cssAnimation;
+  animation-duration:1.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+@keyframes cssAnimation {
+  from {
+    transform: rotate(0deg) scale(0.3) skew(0deg) translate(0px);
+  }
+  to {
+    transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
+  }
+}
+
+body #single-result.active {
+  animation-name: cssAnimation2;
+  animation-duration:1.5s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+@keyframes cssAnimation2 {
+  from {
+    transform: rotate(180deg) scale(0.3) skew(0deg) translate(0px);
+  }
+  to {
+    transform: rotate(0deg) scale(1) skew(0deg) translate(0px);
+  }
+}
+
+
+@media (max-width: 400px) {
+ 
+
+  body .searchContainer .drink-row {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  body .searchContainer .drink-ingredient {
+    text-align: center;
+  }
+  .popular-img {
+    width: 80px;
+  }
+}
