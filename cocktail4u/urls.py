@@ -16,4 +16,6 @@ urlpatterns = [
     path("get_id_drink", views.get_id_drink, name="get_id_drink"),
     path("new_comment", views.new_comment, name="new_comment"),
     path("favorites", views.favorites, name="favorites")
+    
+
 ]

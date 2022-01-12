@@ -320,7 +320,7 @@ document.addEventListener("DOMContentLoaded", function() {
           btn_pagination_favorites.forEach(x => {
           x.addEventListener('click', () => {
             console.log(x.dataset.page);
-            // getFavorite(results, 2);
+
             getFavorite(results, x.dataset.page);
           })
       
