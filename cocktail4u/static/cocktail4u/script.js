@@ -55,8 +55,7 @@ document.addEventListener("DOMContentLoaded", function() {
       favorites_title.style.display = "block";
       getFavorite(results);
       open_animation(results);
-      // paginator.style.display = "block";
-      // paginator.style.display ="block";
+      
     })
   
   
