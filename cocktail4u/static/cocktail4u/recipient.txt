@@ -1,0 +1,48 @@
+   <div data-infos_id="${drink.idDrink}" id="infos" class="infos">
+
+                <h2>${drink.strDrink}</h2>
+    
+                <p class="category">Glass:${drink.strGlass}</p> 
+                <p class="category">Alcool:${drink.strAlcoholic}</p> 
+                <p class="category">Category:${drink.strCategory}</p> 
+            
+                <img src='${drink.strDrinkThumb}'/>
+    
+              <div id="instruction">
+                    <h4 style="color:black;">Ingredients: </h4></br>
+                      <ul>
+                          <li>${ drink.strIngredient1 }</li>
+                          <li>${ drink.strIngredient2 }</li>
+                          <li>${ drink.strIngredient3 }</li>
+                          <li>${ drink.strIngredient4 }</li>
+                          <li>${ drink.strIngredient5 }</li>
+                          <li>${ drink.strIngredient6 }</li>
+                          <li>${ drink.strIngredient7 }</li>
+                          <li>${ drink.strIngredient8 }</li>
+                      </ul>
+                <p  style="color:black;">${drink.strInstructions}</p>
+              </div>
+              </br>
+              </br>
+             
+
+              
+
+              <div class="div-user-action">
+
+              <div class="div-counter">
+              <p id="counter${drink.idDrink}">0 like</p>
+              </div>
+              
+              <div class="div-like">
+                <button data-id=${drink.idDrink} id="like${drink.idDrink}" class="like-btn btn btn-primary btn-lg">like</button>
+              </div>
+
+              <div class="comment">
+
+                <button data-comment=${drink.idDrink} id="comment${drink.idDrink}" class="comment-btn btn btn-info btn-lg">comment</button>
+
+              </div>
+
+              
+              <div/>

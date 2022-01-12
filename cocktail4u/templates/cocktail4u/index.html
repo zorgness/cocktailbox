@@ -1,0 +1,181 @@
+{% extends "cocktail4u/layout.html" %}
+
+{% block body %}
+
+<div class="div-alert" role="alert"></div>
+
+<a id="title-2" href="#"><h1 class="title">The Cocktail Box</h1></a>
+    <div class="main-grid">
+        <div class="main-box">
+            
+            <h1 class="title">The Cocktail Box </h1>  
+            
+        </div>
+    </div>
+    
+    
+        {% if user.is_authenticated%}
+        <input id="is-online" type="hidden" data-online="online">
+        {% else %}
+        <input id="is-online" type="hidden" data-online="no session">
+        {% endif %}
+    
+
+
+    
+
+    <div class="banner">
+      <img src="https://i.ibb.co/WnNjcKK/kisspng-vector-graphics-champagne-cocktail-alcoholic-bever-5d05634ad3edc6-7349564715606341868681.png" alt="banner">
+    </div>
+    
+
+        <h2 id="favorites-title" style="text-align: center; padding: 16px;">Favorites</h2>
+
+    
+
+    <div id="popular">
+
+    <strong><h2 style="text-align: center; padding: 16px;">Popular</h2></strong> 
+    
+
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="ingredient" style="display: flex; justify-content: center;">
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <img data-ingr ='gin' class="popular-img" src="https://www.thecocktaildb.com/images/ingredients/gin-Medium.png" alt="">
+                        <p>gin</p>
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <img data-ingr ='vodka' class="popular-img" src="https://www.thecocktaildb.com/images/ingredients/vodka-Medium.png" alt="">
+                        <p>vodka</p>
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <img data-ingr='whiskey' class="popular-img" src="https://www.thecocktaildb.com/images/ingredients/whiskey-Medium.png" alt="">
+                        <p>whiskey</p>
+                    </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="ingredient" style="display: flex; justify-content: center;">
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <img data-ingr ='champagne' class="popular-img" src="https://www.thecocktaildb.com/images/ingredients/champagne-Medium.png" alt="">
+                        <p>champagne</p>
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <img data-ingr ='prosecco' class="popular-img" src="https://www.thecocktaildb.com/images/ingredients/prosecco-Medium.png" alt="">
+                        <p>prosecco</p>
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <img data-ingr='vermouth' class="popular-img" src="https://www.thecocktaildb.com/images/ingredients/vermouth-Medium.png" alt="">
+                        <p>vermouth</p>
+                    </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="ingredient" style="display: flex; justify-content: center;">
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <img data-ingr ='cachaca' class="popular-img" src="https://www.thecocktaildb.com/images/ingredients/cachaca-Medium.png" alt="">
+                        <p>cachaca</p>
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <img data-ingr ='light%20rum' class="popular-img" src="https://www.thecocktaildb.com/images/ingredients/light%20rum-Medium.png" alt="">
+                        <p>light rum</p>
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center;">
+                        <img data-ingr='tequila' class="popular-img" src="https://www.thecocktaildb.com/images/ingredients/tequila-Medium.png" alt="">
+                        <p>tequila</p>
+                    </div>    
+                </div>
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next )" href="#carouselExampleControls" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+
+
+  
+            
+        </div>
+    </div>
+
+
+    
+
+    <div id="results"></div>
+
+    <div id="single-result"></div>
+
+
+    <div id="comment-section">
+        <h3>Add a comment</h3>
+
+        <form action="" id="formcomment">
+            
+            <input type="text-area" id="comment-input" autocomplete="off" required>
+            <input type="submit">
+
+        </form>
+      
+    </div>
+
+    <div id="comment-result"></div>
+
+
+    <nav class="paginator" style="margin: 15px;">
+        <ul class="pagination justify-content-center">
+         
+        </ul>
+      </nav>
+
+
+
+      <!-- Footer -->
+<footer class="navbar-light  text-center text-light fixed-bottom" style="margin-bottom: 0;">
+    <!-- Grid container -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      <!-- Section: Social media -->
+      
+        <!-- Facebook -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fa fa-facebook-f"></i
+        ></a>
+  
+        <!-- Google -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fa fa-google"></i
+        ></a>
+  
+        <!-- Instagram -->
+        <a class="btn btn-outline-light btn-floating m-1" href="#!" role="button"
+          ><i class="fa fa-instagram"></i
+        ></a>
+  
+        
+  
+      
+      <!-- Section: Social media -->
+      <p>Nothing work, it's just to look cool!!!</p>
+  </div>
+
+  
+    
+  </footer>
+  <!-- Footer -->
+
+
+
+    
+</body>
+</html>
+    
+
+
+{% endblock %}
+
