@@ -1,1 +1,1 @@
-web: gunicorn cocktail_box.wsgi
+web: gunicorn thecocktailbox.wsgi
