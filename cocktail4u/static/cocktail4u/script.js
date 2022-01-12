@@ -282,10 +282,8 @@ document.addEventListener("DOMContentLoaded", function() {
     .then((res) => res.json())
     .then(data => {
       footer.style.display ="none";
-      banner.style.display ="none";
       comment_section.style.display = "none";
       comment_result.style.display = "none";
-    //   paginator.style.display = "none";
       div.innerHTML = "";
       let generatedHTML = "";
       if(data.length === 0) {

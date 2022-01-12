@@ -16,12 +16,6 @@ from .models import User, Drink, Comment
 
 def index(request):
 
-    # c = Comment.objects.all()
-    # c.delete()
-
-    # d = Drink.objects.all()
-    # d.delete()
-
     return render(request, "cocktail4u/index.html")
 
 
@@ -94,7 +88,6 @@ def comment(request):
     if request.method == 'PUT':
         data = json.loads(request.body)
         response = data.get("condition")
-        print(response)
         if response == True:
             return JsonResponse("on single page", safe=False)
 
