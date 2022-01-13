@@ -379,6 +379,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
   // function getLike
   async function getLike(id, name, image) {
+    console.log(id, name, image)
    await fetch("like", {
       method: 'PUT',
       body: JSON.stringify({

@@ -8,8 +8,8 @@ class User(AbstractUser):
 
 class Drink(models.Model):
     drink_id = models.IntegerField()
-    drink_name = models.CharField(max_length=50)
-    drink_image = models.CharField(max_length=50)
+    drink_name = models.CharField(max_length=200)
+    drink_image = models.CharField(max_length=200)
     likes = models.ManyToManyField(User, related_name="user_like")
     comment = models.ManyToManyField('Comment', related_name="user_comment")
 
