@@ -277,7 +277,7 @@ document.addEventListener("DOMContentLoaded", function() {
   // getfavorite 
   
   function getFavorite(div, page) {
-    fetch("/favorites")
+    fetch("favorites")
     .then((res) => res.json())
     .then(data => {
       console.log(data);
@@ -485,8 +485,7 @@ document.addEventListener("DOMContentLoaded", function() {
               <strong><p id="counter${data.idDrink}">0 like</p></strong>
             </div>
           <div class="div-like" align="center">
-                    <button
-                     data-id=${data.idDrink} data-name=${data.strDrink} data-image=${data.strDrinkThumb} id="like${data.idDrink}" class="like-btn btn btn-light btn-lg"><i class="fa fa-heart-o"></i></button>
+                    <button data-id=${data.idDrink} data-name=${data.strDrink} data-image=${data.strDrinkThumb} id="like${data.idDrink}" class="like-btn btn btn-light btn-lg"><i class="fa fa-heart-o"></i></button>
           </div>
             
       </div>
