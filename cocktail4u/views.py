@@ -23,6 +23,8 @@ def index(request):
 @login_required(login_url='login')
 @csrf_exempt
 def like(request):
+    if request.method == 'GET':
+        return JsonResponse("wrong way", safe=False)
 
     if request.method == 'PUT':
         user = User.objects.get(pk=request.user.id)

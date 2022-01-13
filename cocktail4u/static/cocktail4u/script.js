@@ -318,8 +318,7 @@ document.addEventListener("DOMContentLoaded", function() {
       console.log(btn_pagination_favorites);
           btn_pagination_favorites.forEach(x => {
           x.addEventListener('click', () => {
-            console.log(x.dataset.page);
-            // getFavorite(results, 2);
+            
             getFavorite(results, x.dataset.page);
           })
       
@@ -380,7 +379,7 @@ document.addEventListener("DOMContentLoaded", function() {
   
   // function getLike
   function getLike(id, name, image) {
-    fetch("/like", {
+    fetch("like", {
       method: 'PUT',
       body: JSON.stringify({
         "drink_id" : id,
@@ -389,7 +388,7 @@ document.addEventListener("DOMContentLoaded", function() {
     })
     }).then((res) => res.ok ? res.json() : new Error('Something went wrong'))
     .then(data => {
-      // console.log(data)
+      console.log(data);
       let btnToUpdate = document.getElementById("like" + id);
       if(data === 'save') {
         btnToUpdate.innerHTML = `<i class="fa fa-heart"></i>`;
