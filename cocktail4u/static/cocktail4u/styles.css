@@ -167,7 +167,7 @@ body #single-result.active {
 }
 
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
  
 
   body .searchContainer .drink-row {
@@ -179,7 +179,7 @@ body #single-result.active {
     text-align: center;
   }
   #popular {
-    margin-top: 50%;
+    margin-top: 40%;
   }
   .popular-img {
     width: 80px;
