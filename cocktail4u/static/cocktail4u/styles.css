@@ -28,7 +28,6 @@ body {
   opacity: 0.4;
   position: absolute;
   text-align: center;
-  margin:30px;
 
   
 }
@@ -93,7 +92,7 @@ body #results {
 
 }
 
-body #result .card img:hover {
+.more:hover {
   opacity: 0.8;
 }
 body .noResult {
@@ -180,7 +179,7 @@ body #single-result.active {
     text-align: center;
   }
   #popular {
-    top:50%
+    margin-top: 50%;
   }
   .popular-img {
     width: 80px;
