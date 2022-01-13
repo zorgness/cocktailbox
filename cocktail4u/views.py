@@ -49,6 +49,8 @@ def like(request):
                 drink.likes.add(user)
                 drink.save()
                 return JsonResponse("save", safe=False)
+            
+    return HttpResponseRedirect(reverse("cocktail4u/index.html"))
 
 
 def update(request):
