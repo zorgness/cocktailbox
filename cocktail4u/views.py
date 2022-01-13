@@ -20,6 +20,7 @@ def index(request):
 
 
 
+@login_required(login_url='login')
 @csrf_exempt
 def like(request):
 

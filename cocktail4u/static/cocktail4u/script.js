@@ -379,8 +379,8 @@ document.addEventListener("DOMContentLoaded", function() {
   
   
   // function getLike
-  async function getLike(id, name, image) {
-    await fetch("/like", {
+  function getLike(id, name, image) {
+    fetch("/like", {
       method: 'PUT',
       body: JSON.stringify({
         "drink_id" : id,
@@ -406,8 +406,8 @@ document.addEventListener("DOMContentLoaded", function() {
   }; 
   
   // updateLike
-  async function updateLike() {
-    await fetch("update")
+  function updateLike() {
+    fetch("update")
     .then((res) => res.json())
     .then(data => {
           data.forEach(element => {
@@ -423,8 +423,8 @@ document.addEventListener("DOMContentLoaded", function() {
   };
   
   // Counter
-  async function counter() {
-    await fetch("counter")
+  function counter() {
+    fetch("counter")
     .then((res) => res.json())
     .then(data => {
       data.info.forEach(element => {
