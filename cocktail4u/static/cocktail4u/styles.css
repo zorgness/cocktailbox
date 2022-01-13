@@ -28,6 +28,7 @@ body {
   opacity: 0.4;
   position: absolute;
   text-align: center;
+  margin:30px;
 
   
 }
@@ -90,6 +91,10 @@ body #results {
   justify-content: space-around;
  
 
+}
+
+body #result .card img:hover {
+  opacity: 0.8;
 }
 body .noResult {
   font-size: 4rem;
@@ -173,6 +178,9 @@ body #single-result.active {
 
   body .searchContainer .drink-ingredient {
     text-align: center;
+  }
+  #popular {
+    top:50%
   }
   .popular-img {
     width: 80px;
