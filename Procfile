@@ -1,1 +1,1 @@
-web: gunicorn thecocktailbox.wsgi --log-file - 
+web: gunicorn thecocktailbox.wsgi --log file-
