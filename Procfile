@@ -1,1 +1,1 @@
-web: gunicorn thecocktailbox.wsgi
+web: gunicorn final.wsgi
