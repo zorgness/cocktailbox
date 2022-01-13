@@ -280,6 +280,7 @@ document.addEventListener("DOMContentLoaded", function() {
     fetch("/favorites")
     .then((res) => res.json())
     .then(data => {
+      console.log(data);
       footer.style.display ="none";
       comment_section.style.display = "none";
       comment_result.style.display = "none";
@@ -315,7 +316,6 @@ document.addEventListener("DOMContentLoaded", function() {
       singlePage(favorite_link);
       
       const btn_pagination_favorites = document.querySelectorAll(".page-item");
-      console.log(btn_pagination_favorites);
           btn_pagination_favorites.forEach(x => {
           x.addEventListener('click', () => {
             
@@ -378,8 +378,8 @@ document.addEventListener("DOMContentLoaded", function() {
   
   
   // function getLike
-  function getLike(id, name, image) {
-    fetch("like", {
+  async function getLike(id, name, image) {
+   await fetch("like", {
       method: 'PUT',
       body: JSON.stringify({
         "drink_id" : id,
