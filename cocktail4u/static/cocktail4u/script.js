@@ -79,9 +79,13 @@ document.addEventListener("DOMContentLoaded", function() {
       await fetchSearch(urlSearch);
       footer.style.display = "none";
       
-      if(urlSearch.includes('search.php?s=') && drinks.length > 1 || urlSearch.includes('filter.php?i=')) {     
-        comment_section.style.display = "none";
-        onSinglePage(false, comment_result);
+      if(drinks !== null) {
+        if(urlSearch.includes('search.php?s=') && drinks.length > 1 || urlSearch.includes('filter.php?i=')) {     
+          comment_section.style.display = "none";
+          onSinglePage(false, comment_result);
+
+      }
+      
         
     
       } else {
