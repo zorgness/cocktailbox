@@ -253,8 +253,7 @@ document.addEventListener("DOMContentLoaded", function() {
         .then(data => {
           const comment_result = document.getElementById("comment-result");
           if(data.comments !== undefined) {
-            document.getElementById("formcomment").dataset.drink_id = data.comments[0].drink_id;
-            
+            document.getElementById("formcomment").dataset.drink_id = data.comments[0].drink_id;  
             let generatedHTML = "";
             generatedHTML += (
             data.comments.map(comment => (

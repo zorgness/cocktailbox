@@ -35,6 +35,9 @@ def like(request):
         if drink_id != None:
             try:
                 drink = Drink.objects.get(drink_id=drink_id)
+                if drink.drink_name == "" and drink.drink_image == "":
+                    drink.drink_name = drink_name
+                    drink.drink_image = drink_image
                 list_user = drink.likes.all()
                 if user not in list_user:
                     drink.likes.add(user)
@@ -150,7 +153,7 @@ def new_comment(request):
             drink.comment.add(f)
             drink.save()
         except Drink.DoesNotExist:
-            drink = Drink(drink_id=drink_id)
+            drink = Drink(drink_id=drink_id, )
             drink.save()
             drink.comment.add(f)
             drink.save()
