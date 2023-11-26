@@ -2,9 +2,6 @@
 
 ## Final project for CS50's Web Programming with Python and JavaScript 
 
-You can have a look to the application deploy on heroku.
-
-http://thecocktailbox.herokuapp.com/
 
 ## Distinctiveness and Complexity
 
